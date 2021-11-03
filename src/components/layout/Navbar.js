@@ -1,149 +1,69 @@
 import React from 'react';
+import Logo from '../../assets/images/logo.png';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import "../layout/navbar.css";
+import {
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter
+} from '@fortawesome/free-brands-svg-icons';
+import {faBell, faComment} from "@fortawesome/free-solid-svg-icons";
 
+library.add(
+    faBell,
+    faGithubAlt,
+    faGoogle,
+    faFacebook,
+    faTwitter
+);
 const Navbar = () => {
 
     return (
-        <div>
-            <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            className="fas fa-bars"></i></a>
-                    </li>
-                    <li className="nav-item d-none d-sm-inline-block">
-                        <a href="index3.html" className="nav-link">Home</a>
-                    </li>
-                    <li className="nav-item d-none d-sm-inline-block">
-                        <a href="#" className="nav-link">Contact</a>
-                    </li>
-                </ul>
-
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                        <a className="nav-link" data-widget="navbar-search" href="#" role="button">
-                            <i className="fas fa-search"></i>
-                        </a>
-                        <div className="navbar-search-block">
-                            <form className="form-inline">
-                                <div className="input-group input-group-sm">
-                                    <input className="form-control form-control-navbar" type="search"
-                                           placeholder="Search" aria-label="Search"/>
-                                        <div className="input-group-append">
-                                            <button className="btn btn-navbar" type="submit">
-                                                <i className="fas fa-search"></i>
-                                            </button>
-                                            <button className="btn btn-navbar" type="button"
-                                                    data-widget="navbar-search">
-                                                <i className="fas fa-times"></i>
-                                            </button>
-                                        </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" data-toggle="dropdown" href="#">
-                            <i className="far fa-comments"></i>
-                            <span className="badge badge-danger navbar-badge">3</span>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                            <a href="#" className="dropdown-item">
-                                <div className="media">
-                                    <img src="dist/img/user1-128x128.jpg" alt="User Avatar"
-                                         className="img-size-50 mr-3 img-circle"/>
-                                        <div className="media-body">
-                                            <h3 className="dropdown-item-title">
-                                                Brad Diesel
-                                                <span className="float-right text-sm text-danger">
-                                                    <i className="fas fa-star"/></span>
-                                            </h3>
-                                            <p className="text-sm">Call me whenever you can...</p>
-                                            <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i>
-                                                4 Hours Ago</p>
-                                        </div>
-                                </div>
+        <nav className="navbar  navbar-expand-lg navbar-light bg-light">
+            <div className="container-sm">
+                <a className="navbar-brand" href="/">
+                    <img src={Logo} alt="logo" className="img-fluid" width="140"/>
+                </a>
+                <button className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"/>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Link</a>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarDropdown"
+                               role="button"
+                               data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Dropdown
                             </a>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item">
-                                <div className="media">
-                                    <img src="dist/img/user8-128x128.jpg" alt="User Avatar"
-                                         className="img-size-50 img-circle mr-3"/>
-                                        <div className="media-body">
-                                            <h3 className="dropdown-item-title">
-                                                John Pierce
-                                                <span className="float-right text-sm text-muted">
-                                                    <i className="fas fa-star"></i></span>
-                                            </h3>
-                                            <p className="text-sm">I got your message bro</p>
-                                            <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> 4
-                                                Hours Ago</p>
-                                        </div>
-                                </div>
-                            </a>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item">
-                                <div className="media">
-                                    <img src="dist/img/user3-128x128.jpg" alt="User Avatar"
-                                         className="img-size-50 img-circle mr-3"/>
-                                        <div className="media-body">
-                                            <h3 className="dropdown-item-title">
-                                                Nora Silvester
-                                                <span className="float-right text-sm text-warning"><i
-                                                    className="fas fa-star"></i></span>
-                                            </h3>
-                                            <p className="text-sm">The subject goes here</p>
-                                            <p className="text-sm text-muted"><i className="far fa-clock mr-1"></i> 4
-                                                Hours Ago</p>
-                                        </div>
-                                </div>
-                            </a>
-                            <div className="dropdown-divider"></div>
-                            <a href="#" className="dropdown-item dropdown-footer">See All Messages</a>
-                        </div>
-                    </li>
-                    <li className="nav-item dropdown">
-                        <a className="nav-link" data-toggle="dropdown" href="#">
-                            <i className="far fa-bell"/>
-                            <span className="badge badge-warning navbar-badge">15</span>
-                        </a>
-                        <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                            <span className="dropdown-header">15 Notifications</span>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item">
-                                <i className="fas fa-envelope mr-2"/> 4 new messages
-                                <span className="float-right text-muted text-sm">3 mins</span>
-                            </a>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item">
-                                <i className="fas fa-users mr-2"/> 8 friend requests
-                                <span className="float-right text-muted text-sm">12 hours</span>
-                            </a>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item">
-                                <i className="fas fa-file mr-2"/> 3 new reports
-                                <span className="float-right text-muted text-sm">2 days</span>
-                            </a>
-                            <div className="dropdown-divider"/>
-                            <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-widget="fullscreen" href="#" role="button">
-                            <i className="fas fa-expand-arrows-alt"/>
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                            <i className="fas fa-th-large"/>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><a className="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr className="dropdown-divider"/>
+                                </li>
+                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     );
-
 }
-
 export default Navbar;
