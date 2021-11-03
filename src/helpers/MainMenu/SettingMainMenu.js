@@ -30,7 +30,7 @@ export const SettingMainMenu = [
         id: 1,
         icon: Icon1,
         name: 'Akademik',
-        path: '/akademik',
+        path: '/academic',
     },
     {
         id: 2,

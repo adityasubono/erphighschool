@@ -29,7 +29,7 @@ const Login = () => {
                            placeholder="name@example.com" />
                 </div>
                 <div className="mb-3">
-                    <a type="button" href="/dashboard" className="btn btn-primary">Login</a>
+                    <a type="button" href="/home" className="btn btn-primary">Login</a>
                 </div>
             </div>
         </div>

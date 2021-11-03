@@ -1,13 +1,23 @@
-.smart-scroll{
+#navbar {
+    background-color: #f8f5f5;
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
+    top: -50px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1036;
+    font-weight: bold;
 }
-.scrolled-down{
-    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #595959;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
 }
-.scrolled-up{
-    transform:translateY(0); transition: all 0.3s ease-in-out;
+
+#navbar a:hover {
+    color: darkblue;
 }

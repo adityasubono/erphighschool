@@ -8,7 +8,7 @@ import {
     faFacebook,
     faTwitter
 } from '@fortawesome/free-brands-svg-icons';
-import {faBell, faComment} from "@fortawesome/free-solid-svg-icons";
+import {faBell } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
     faBell,
@@ -20,7 +20,7 @@ library.add(
 const Navbar = () => {
 
     return (
-        <nav className="navbar  navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg" id="navbar">
             <div className="container-sm">
                 <a className="navbar-brand" href="/">
                     <img src={Logo} alt="logo" className="img-fluid" width="140"/>
@@ -66,4 +66,14 @@ const Navbar = () => {
         </nav>
     );
 }
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("navbar").style.top = "0px";
+    } else {
+        document.getElementById("navbar").style.top = "-150px";
+    }
+}
+
 export default Navbar;
