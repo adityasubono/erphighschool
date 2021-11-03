@@ -1,0 +1,15 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+$border-radius: 30px;
+$primary: #000000;
+$utilities: (
+        "custom-margin": (
+                property: margin-bottom,
+                class: mb,
+                values: (
+                        0: 0,
+                        1: 1rem,
+                        2: 2rem,
+                        3: 3rem,
+                ),
+        ),
+);
